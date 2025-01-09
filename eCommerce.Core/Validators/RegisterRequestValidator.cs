@@ -19,7 +19,6 @@ namespace eCommerce.Core.Validators
                 .Length(1, 50).WithMessage("Person name must be 1 to 50 characters long.");
 
             RuleFor(temp => temp.Gender)
-                .NotEmpty().WithMessage("Gender is required.")
                 .IsInEnum().WithMessage("Invalid gender option.");
         }
     }
